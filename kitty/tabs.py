@@ -435,13 +435,13 @@ class Tab:  # {{{
         check_for_suitability = True
         if cmd is None:
             if use_shell:
-                cmd = resolved_shell(get_options())
+                cmd = cmdline_for_hold()
                 check_for_suitability = False
             else:
                 if self.args.args:
                     cmd = list(self.args.args)
                 else:
-                    cmd = resolved_shell(get_options())
+                    cmd = cmdline_for_hold()
                     check_for_suitability = False
         if check_for_suitability:
             old_exe = cmd[0]
@@ -461,7 +461,7 @@ class Tab:  # {{{
                 else:
                     if stat.S_ISDIR(st.st_mode):
                         cwd = old_exe
-                        cmd = resolved_shell(get_options())
+                        cmd = cmdline_for_hold()
                     elif not is_executable:
                         import shlex
 
