@@ -68,6 +68,8 @@ Detailed list of changes
 
 - Dont clear selections on erase in screen commands unless the erased region intersects a selection (:iss:`7408`)
 
+- Drop support for 32bit architectures. kitty binaries are no longer available for these however kitten binaries continue to be available.
+
 0.34.1 [2024-04-19]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
